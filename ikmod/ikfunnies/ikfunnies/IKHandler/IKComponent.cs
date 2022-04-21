@@ -21,7 +21,7 @@ namespace IKMod.IKHandler
 
             if (vrik == null) vrik = gameObject.GetComponentInChildren<VRIK>();
 
-
+            // lmfao >> 
             if (RuntimeConfig.tPose)
                 vrik.animator.enabled = false;
 
