@@ -27,7 +27,7 @@ namespace IKMod
         {
             ClassInjector.RegisterTypeInIl2Cpp<IKComponent>();
             Harmony = HarmonyInstance;
-            HarmonyInstance.Patch(typeof(NetworkManager).GetMethod("OnJoinedRoom"), new HarmonyMethod(typeof(Main).GetMethod(nameof(OnPlayerJoin), BindingFlags.NonPublic | BindingFlags.Static)));
+            HarmonyInstance.Patch(typeof(NetworkManager).GetMethod("OnJoinedRoom"), new HarmonyMethod(typeof(Main).GetMethod(nameof(OnRoomJoin), BindingFlags.NonPublic | BindingFlags.Static)));
             UIAwait(delegate
             {
 
@@ -116,7 +116,7 @@ namespace IKMod
             action();
         }
 
-        private static void OnPlayerJoin()
+        private static void OnRoomJoin()
         {
             MelonCoroutines.Start(AddComponent());
         }
