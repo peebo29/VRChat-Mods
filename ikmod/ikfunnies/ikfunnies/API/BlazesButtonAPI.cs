@@ -388,10 +388,10 @@ namespace IKMod.API
                 {
                     if (btnQMLoc.StartsWith("Menu_"))
                     {
-                        APIUtils.GetMenuStateControllerInstance().Method_Public_Void_String_Boolean_0("QuickMenu" + btnQMLoc.Remove(0, 5));
+                        APIUtils.GetMenuStateControllerInstance().Method_Public_Void_String_Boolean_Boolean_0("QuickMenu" + btnQMLoc.Remove(0, 5));
                         return;
                     }
-                    APIUtils.GetMenuStateControllerInstance().Method_Public_Void_String_Boolean_0(btnQMLoc);
+                    APIUtils.GetMenuStateControllerInstance().Method_Public_Void_String_Boolean_Boolean_0(btnQMLoc);
                     return;
                 }
                 MenuPage.Method_Protected_Virtual_New_Void_0();
@@ -414,7 +414,7 @@ namespace IKMod.API
 
         public void OpenMe()
         {
-            APIUtils.GetMenuStateControllerInstance().Method_Public_Void_String_UIContext_Boolean_0(MenuPage.field_Public_String_0);
+            APIUtils.GetMenuStateControllerInstance().Method_Public_Void_String_UIContext_Boolean_TransitionType_0(MenuPage.field_Public_String_0);
         }
 
         public void CloseMe()

@@ -15,6 +15,7 @@ using UnityEngine;
 using VRC.UI.Core;
 using IKMod.Config;
 using RootMotion.FinalIK;
+using Photon.Realtime;
 
 namespace IKMod
 {
